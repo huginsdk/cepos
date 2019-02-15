@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Request">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestValue" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RequestResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogOn">
+        <s:complexType />
+      </s:element>
+      <s:element name="LogOnResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LogOnResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="RequestSoapIn">
+    <wsdl:part name="parameters" element="tns:Request" />
+  </wsdl:message>
+  <wsdl:message name="RequestSoapOut">
+    <wsdl:part name="parameters" element="tns:RequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogOnSoapIn">
+    <wsdl:part name="parameters" element="tns:LogOn" />
+  </wsdl:message>
+  <wsdl:message name="LogOnSoapOut">
+    <wsdl:part name="parameters" element="tns:LogOnResponse" />
+  </wsdl:message>
+  <wsdl:portType name="PosWebServiceSoap">
+    <wsdl:operation name="Request">
+      <wsdl:input message="tns:RequestSoapIn" />
+      <wsdl:output message="tns:RequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LogOn">
+      <wsdl:input message="tns:LogOnSoapIn" />
+      <wsdl:output message="tns:LogOnSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PosWebServiceSoap" type="tns:PosWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Request">
+      <soap:operation soapAction="http://tempuri.org/Request" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogOn">
+      <soap:operation soapAction="http://tempuri.org/LogOn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PosWebServiceSoap12" type="tns:PosWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Request">
+      <soap12:operation soapAction="http://tempuri.org/Request" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogOn">
+      <soap12:operation soapAction="http://tempuri.org/LogOn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PosWebService">
+    <wsdl:port name="PosWebServiceSoap" binding="tns:PosWebServiceSoap">
+      <soap:address location="http://localhost:1095/PosService/PosWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PosWebServiceSoap12" binding="tns:PosWebServiceSoap12">
+      <soap12:address location="http://localhost:1095/PosService/PosWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,902 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{22F121D2-FF40-4952-AC9E-134C87FEC155}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hugin.POS</RootNamespace>
+    <AssemblyName>pos</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <StartupObject>Hugin.POS.Chassis</StartupObject>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;TUBITAK_MODE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;TUBITAK_MODE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Hugin.UBLCommon, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Etc\HuginInvoiceService\Hugin.UBLCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="Hugin.UBLManager">
+      <HintPath>..\Etc\HuginInvoiceService\Hugin.UBLManager.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.4.369, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Etc\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adjustment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Advance.cs" />
+    <Compile Include="BackgroundWorker.cs" />
+    <Compile Include="CarParkDocument.cs" />
+    <Compile Include="CollectionInvoice.cs" />
+    <Compile Include="CurrentAccountDocument.cs" />
+    <Compile Include="DocumentFileHelper.cs" />
+    <Compile Include="EArchive.cs" />
+    <Compile Include="EDocumentManager.cs" />
+    <Compile Include="EInvoice.cs" />
+    <Compile Include="MealTicket.cs" />
+    <Compile Include="ModuleManeger.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BarcodeAdjustment.cs" />
+    <Compile Include="CashRegister.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashRegisterInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Error.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exceptions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FiscalItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IDoubleEnumerable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IMenuItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Invoice.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Label.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MenuLabel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MenuList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Number.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Program.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PromotionDocument.cs" />
+    <None Include="app.manifest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\DOVIZKUR.DAT">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\REYON.DAT">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\SERIAL.DAT">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\SVNTemplate.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Receipt.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReturnDocument.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SalesDocument.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SalesItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SelfEmployementInvoice.cs" />
+    <Compile Include="SoundManager.cs" />
+    <Compile Include="States\AdditionalInfoMenu.cs" />
+    <Compile Include="States\AlertCashier.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\AssignSalesPerson.cs" />
+    <Compile Include="States\BlockOnPaper.cs" />
+    <Compile Include="States\Calculator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\CashRegisterLoadError.cs" />
+    <Compile Include="States\CommandMenu.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\ConfirmAuthorization.cs" />
+    <Compile Include="States\ConfirmCashier.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\ConfirmLogout.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\BlockingState.cs" />
+    <Compile Include="States\ConfirmPayment.cs" />
+    <Compile Include="States\ConfirmSlip.cs" />
+    <Compile Include="States\ConfirmVoid.cs" />
+    <Compile Include="States\DocumentPaymentStatus.cs" />
+    <Compile Include="States\DocumentPE.cs" />
+    <Compile Include="States\ElectronicJournalError.cs" />
+    <Compile Include="States\EnterClerkNumber.cs" />
+    <Compile Include="States\EnterQRCode.cs" />
+    <Compile Include="States\FiscalIdBlock.cs" />
+    <Compile Include="States\KeyInputBlockingError.cs" />
+    <Compile Include="States\KeyServiceMenu.cs" />
+    <Compile Include="States\KeyState.cs" />
+    <Compile Include="States\EnterCurrency.cs" />
+    <Compile Include="States\EnterDecimal.cs" />
+    <Compile Include="States\ListFiscalItem.cs" />
+    <Compile Include="States\ListProductPriceLookup.cs" />
+    <Compile Include="States\PaymentAfterPE.cs" />
+    <Compile Include="States\PaymentOnBarcode.cs" />
+    <Compile Include="States\PrintEftPaymentAfterPE.cs" />
+    <Compile Include="States\PrinterBlockingError.cs" />
+    <Compile Include="States\PrinterConnectionError.cs" />
+    <Compile Include="States\ServiceMenu.cs" />
+    <Compile Include="States\SetupMenu.cs" />
+    <Compile Include="States\Teller.cs" />
+    <Compile Include="States\WaitingState.cs" />
+    <Compile Include="States\PrinterStatusError.cs" />
+    <Compile Include="States\CustomerInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\DocumentOpen.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\DocumentPaying.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\DocumentState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\DocumentSubTotal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\EnterCardNumber.cs" />
+    <Compile Include="States\EnterInteger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\EnterIP.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\EnterNumber.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\EnterPassword.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\EnterString.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\EnterTotalAmount.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\EnterUnitPrice.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\List.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\ListCommandMenu.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\ListCreditTypes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\ListCurrencies.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\ListDocument.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\ListLabel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\ListProductBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\ListProductRepeat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\ListProductVoid.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\ListVoid.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\Login.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\LoginLocked.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\Payment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\PaymentAfterTotalAdjustment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\ReportMenu.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\Selling.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\SilentState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\Start.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\State.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\VoidPayment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\VoidSale.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\XReportPE.cs" />
+    <Compile Include="TcpOrder.cs" />
+    <Compile Include="VoidItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Waybill.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\CARI.DAT">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\KASIYER.DAT">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\PROGRAM.DAT">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\PROMO.DAT">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\PROREYON.DAT">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\PROURUN.DAT">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\URUN.DAT">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\App.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Keyboard.ini">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Compile Include="CashPaymentInfo.cs" />
+    <Compile Include="CheckPaymentInfo.cs" />
+    <Compile Include="Confirm.cs" />
+    <Compile Include="CreditPaymentInfo.cs" />
+    <Compile Include="CurrencyPaymentInfo.cs" />
+    <Compile Include="CustomerMenuList.cs" />
+    <Compile Include="DisplayAdapter.cs" />
+    <Compile Include="PaymentInfo.cs" />
+    <Compile Include="States\EJSummaryReportPE.cs" />
+    <Compile Include="States\PaymentList.cs" />
+    <Compile Include="ProductMenuList.cs" />
+    <Compile Include="Recover.cs" />
+    <Compile Include="Scale.cs" />
+    <Compile Include="States\BarcodeMenu.cs" />
+    <Compile Include="States\EnterBarcode.cs" />
+    <Compile Include="States\SellingAfterSubtotalCorrection.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CashRegisterInput.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CashRegisterInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NOT_FOUND.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\SUCCESS.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\NEEDPROCESS.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\FAILED.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\CRITICAL.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\Program.def">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Image\NoImage.JPG">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="Image\000001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000003.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000004.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000005.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000006.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000007.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000008.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000009.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000010.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000011.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000012.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000013.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000014.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000015.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000016.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000017.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000019.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000020.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000021.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000022.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000023.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000024.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000025.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000026.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000027.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000028.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000029.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000030.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000031.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000032.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000033.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000034.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000035.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000036.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000037.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000038.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000039.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000040.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000041.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000042.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000043.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000044.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000045.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000046.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000047.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000048.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000049.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000050.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000051.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000052.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000053.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000054.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000055.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000056.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000057.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000058.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000059.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000060.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000061.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000062.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000063.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000064.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000065.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000066.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000067.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000068.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000069.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000070.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000071.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000072.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000073.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000074.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000075.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000076.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000077.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000078.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000079.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000080.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000081.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000082.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000083.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000084.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000085.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000086.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000087.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000088.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000089.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000090.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000091.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\000092.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\2200000007551.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\2220151001109.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\2710069000009.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\2710526000009.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\2710852000001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\2810568.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\5413149675551.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\6589176279822.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\8690504089506.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\8690504415503.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\8690637018633.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\8690637112508.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\8690637534089.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\8690639001299.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\8690701009635.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\8690931005896.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\8695876100408.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\8698438202008.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\banner.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\DefaultProduct.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\k1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\k1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\k10.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\k11.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\k2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\k2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\k3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\k4.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\k5.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\k6.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\k7.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\k8.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\TL.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Properties\Template.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hugin.POS.Common\Hugin.POS.Common_10.csproj">
+      <Project>{3426D756-1308-4EAC-AA4E-243E4AAC0FC1}</Project>
+      <Name>Hugin.POS.Common_10</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hugin.POS.Data\Hugin.POS.Data_10.csproj">
+      <Project>{32D7C842-5D43-43EF-842B-EAF129D928EC}</Project>
+      <Name>Hugin.POS.Data_10</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hugin.POS.Display.Datecs\Hugin.POS.Display.Datecs_10.csproj">
+      <Project>{7726e2b1-794e-4cf8-abc2-4ddef12e773f}</Project>
+      <Name>Hugin.POS.Display.Datecs_10</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hugin.POS.Display.Serial\Hugin.POS.Display.Serial_10.csproj">
+      <Project>{404ad7ce-19b3-4f7b-aab8-d37e5ef3a9a8}</Project>
+      <Name>Hugin.POS.Display.Serial_10</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hugin.POS.Printer.FP300\Hugin.POS.Printer.FP300.csproj">
+      <Project>{0a0d1f87-72c8-4ee3-8777-d023a1e8800d}</Project>
+      <Name>Hugin.POS.Printer.FP300</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hugin.POS.PromotionServer\Hugin.POS.PromotionServer_10.csproj">
+      <Project>{6B0FACC2-B4C2-4FEF-9D32-10DC03A0A96B}</Project>
+      <Name>Hugin.POS.PromotionServer_10</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hugin.POS.Security.Intel\Hugin.POS.Security.File_10.csproj">
+      <Project>{81A03884-DB80-45E9-8F5D-54CBE2CE6847}</Project>
+      <Name>Hugin.POS.Security.File_10</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+</Project>

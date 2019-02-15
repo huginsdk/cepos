@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F4440AF5-CAC0-4166-8382-1AD8B7574D62}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Hugin.POS.Data</RootNamespace>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AssemblyName>Hugin.POS.Data</AssemblyName>
+    <TargetFrameworkVersion>v3.1</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>..\Hugin.POS\bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;Mono</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <AndroidLinkMode>None</AndroidLinkMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>..\Hugin.POS\bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <ConsolePause>False</ConsolePause>
+    <DefineConstants>Mono</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Cashier.cs" />
+    <Compile Include="Connector.cs" />
+    <Compile Include="Credit.cs" />
+    <Compile Include="Currency.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="Document.cs" />
+    <Compile Include="HuginLogger.cs" />
+    <Compile Include="InterLoger.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="MessageFileWatcher.cs" />
+    <Compile Include="Product.cs" />
+    <Compile Include="Serial.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="SQLPointAdapter.cs" />
+    <Compile Include="DBPointAdapter_Mono.cs" />
+    <Compile Include="Zip_Mono.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Strings.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\Hugin.POS.Common\Hugin.POS.Common.Mono.csproj">
+      <Project>{DC47C512-B582-4E83-B73A-FD375FB3C739}</Project>
+      <Name>Hugin.POS.Common.Mono</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

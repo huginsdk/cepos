@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE dotfuscator SYSTEM "http://www.preemptive.com/dotfuscator/dtd/dotfuscator_v2.1.dtd">
+<dotfuscator version="2.1">
+  <!--This is application generated code. Do not edit manually.-->
+  <input>
+    <asmlist>
+      <inputassembly>
+        <file dir="${configdir}\..\Pos\bin\Release" name="pos.exe" />
+      </inputassembly>
+    </asmlist>
+  </input>
+  <output>
+    <file dir="${configdir}\Dotfuscated" />
+  </output>
+  <renaming>
+    <excludelist>
+      <type name="Hugin.POS.Adjustment/Type">
+        <field name="Discount" />
+        <field name="Fee" />
+        <field name="PercentDiscount" />
+        <field name="PercentFee" />
+        <field name="value__" />
+      </type>
+      <type name="Hugin.POS.AuthorizationLevel">
+        <field name="O" />
+        <field name="P" />
+        <field name="S" />
+        <field name="value__" />
+        <field name="X" />
+        <field name="Z" />
+      </type>
+      <type name="Hugin.POS.BarcodeType">
+        <field name="ByGramma" />
+        <field name="ByQuantity" />
+        <field name="ByTotalAmount" />
+        <field name="value__" />
+      </type>
+      <type name="Hugin.POS.BlockingError">
+        <field name="BadDM" />
+        <field name="BBXRegistrationOrContent" />
+        <field name="DisconnectedBlackBox" />
+        <field name="FullBlackBox" />
+        <field name="GrandTotalMismatch" />
+        <field name="MBNotOriginal" />
+        <field name="NoError" />
+        <field name="UnformattedBBX" />
+        <field name="value__" />
+        <field name="ZCntMismatch" />
+      </type>
+      <type name="Hugin.POS.Display/Leds">
+        <field name="All" />
+        <field name="Customer" />
+        <field name="None" />
+        <field name="Online" />
+        <field name="Sale" />
+        <field name="value__" />
+      </type>
+      <type name="Hugin.POS.Display/Target">
+        <field name="Both" />
+        <field name="Cashier" />
+        <field name="Customer" />
+        <field name="value__" />
+      </type>
+      <type name="Hugin.POS.DocumentStatus">
+        <field name="Active" />
+        <field name="Cancelled" />
+        <field name="Closed" />
+        <field name="Paying" />
+        <field name="Suspended" />
+        <field name="Transferred" />
+        <field name="value__" />
+        <field name="Voided" />
+      </type>
+      <type name="Hugin.POS.EJError">
+        <field name="EJBitmapError" />
+        <field name="EJCommError" />
+        <field name="EJFiscalIdMismatch" />
+        <field name="EJFormatError" />
+        <field name="EJFull" />
+        <field name="EJIdMismatch" />
+        <field name="value__" />
+      </type>
+      <type name="Hugin.POS.EZLogger/Level">
+        <field name="All" />
+        <field name="Debug" />
+        <field name="Error" />
+        <field name="Fatal" />
+        <field name="Info" />
+        <field name="Success" />
+        <field name="value__" />
+        <field name="Warning" />
+      </type>
+      <type name="Hugin.POS.EZLogger/State">
+        <field name="Paused" />
+        <field name="Running" />
+        <field name="Stopped" />
+        <field name="value__" />
+      </type>
+      <type name="Hugin.POS.MenuLabel`1&lt;TValue&gt;" />
+      <type name="Hugin.POS.MultipleKeys">
+        <field name="Credit" />
+        <field name="End" />
+        <field name="LabelStx" />
+        <field name="None" />
+        <field name="value__" />
+      </type>
+      <type name="Hugin.POS.PaymentInfo/PaymentMethods">
+        <field name="CASH" />
+        <field name="CHECK" />
+        <field name="CREDIT" />
+        <field name="FOREIGNCURRENCY" />
+        <field name="value__" />
+      </type>
+      <type name="Hugin.POS.PendingFPUChange">
+        <field name="AutoCutter" />
+        <field name="Department" />
+        <field name="Logo" />
+        <field name="NoChange" />
+        <field name="UnRead" />
+        <field name="value__" />
+      </type>
+      <type name="Hugin.POS.PosKey">
+        <field name="Backspace" />
+        <field name="CapsLock" />
+        <field name="Cash" />
+        <field name="CashDrawer" />
+        <field name="Check" />
+        <field name="Command" />
+        <field name="Credit" />
+        <field name="Customer" />
+        <field name="D0" />
+        <field name="D1" />
+        <field name="D2" />
+        <field name="D3" />
+        <field name="D4" />
+        <field name="D5" />
+        <field name="D6" />
+        <field name="D7" />
+        <field name="D8" />
+        <field name="D9" />
+        <field name="Discount" />
+        <field name="Document" />
+        <field name="DownArrow" />
+        <field name="End" />
+        <field name="Enter" />
+        <field name="Esc" />
+        <field name="Esc2" />
+        <field name="Fee" />
+        <field name="ForeignCurrency" />
+        <field name="KeyStx" />
+        <field name="LabelStx" />
+        <field name="MagstripeStx" />
+        <field name="NumLock" />
+        <field name="Numpad0" />
+        <field name="Numpad1" />
+        <field name="Numpad2" />
+        <field name="Numpad3" />
+        <field name="Numpad4" />
+        <field name="Numpad5" />
+        <field name="Numpad6" />
+        <field name="Numpad7" />
+        <field name="Numpad8" />
+        <field name="Numpad9" />
+        <field name="Oem1" />
+        <field name="Oem2" />
+        <field name="Oem3" />
+        <field name="Oem4" />
+        <field name="Oem5" />
+        <field name="Oem6" />
+        <field name="Oem7" />
+        <field name="Oem8" />
+        <field name="PercentDiscount" />
+        <field name="PercentFee" />
+        <field name="Period" />
+        <field name="Price" />
+        <field name="PriceLookup" />
+        <field name="Program" />
+        <field name="Quantity" />
+        <field name="Repeat" />
+        <field name="Report" />
+        <field name="SalesPerson" />
+        <field name="ScrollLock" />
+        <field name="Seperator" />
+        <field name="Spacebar" />
+        <field name="SubTotal" />
+        <field name="Total" />
+        <field name="UpArrow" />
+        <field name="value__" />
+        <field name="Void" />
+      </type>
+      <type name="Hugin.POS.PrinterError">
+        <field name="MechanicalFailure" />
+        <field name="NoError" />
+        <field name="NoJournalRoll" />
+        <field name="NoReceiptRoll" />
+        <field name="NoSlip" />
+        <field name="OffLine1" />
+        <field name="OffLine2" />
+        <field name="PrinterOffline" />
+        <field name="RFU" />
+        <field name="value__" />
+      </type>
+      <type name="Hugin.POS.ProcessSelectedItem`1&lt;TSelectedItem&gt;" />
+      <type name="Hugin.POS.ReportType">
+        <field name="FPUReport" />
+        <field name="PaymentReport" />
+        <field name="value__" />
+      </type>
+      <type name="Hugin.POS.Setting">
+        <field name="AutoCustomerAdjustment" />
+        <field name="Autocutter" />
+        <field name="LogLevel" />
+        <field name="MinimumPrice" />
+        <field name="NotPrintCustomerLabels" />
+        <field name="OpenDrawerOnPayment" />
+        <field name="PrintBarcode" />
+        <field name="PrintProductBarcode" />
+        <field name="PrintSubtTotal" />
+        <field name="PromptCreditInstallments" />
+        <field name="ShowCashierNameOnReceipt" />
+        <field name="ShowFooterNote" />
+        <field name="value__" />
+      </type>
+      <type name="Hugin.POS.StateInstance`1&lt;T&gt;" />
+      <type name="Hugin.POS.Types">
+        <field name="Info" />
+        <field name="Report" />
+        <field name="Sale" />
+        <field name="value__" />
+        <field name="ZAfterFailZ" />
+        <field name="ZReport" />
+      </type>
+      <type name="Hugin.POS.States.CustomerInfo" />
+      <type name="Hugin.POS.States.DiplomaticCustomerInfo" />
+      <type name="Hugin.POS.States.List" />
+      <type name="Hugin.POS.States.List/TimerState" />
+      <type name="Hugin.POS.States.ListCommandMenu" />
+      <type name="Hugin.POS.States.ListCreditTypes" />
+      <type name="Hugin.POS.States.ListCurrencies" />
+      <type name="Hugin.POS.States.ListDocument" />
+      <type name="Hugin.POS.States.ListLabel" />
+      <type name="Hugin.POS.States.ListProductBase" />
+      <type name="Hugin.POS.States.ListProductRepeat" />
+      <type name="Hugin.POS.States.ListProductVoid" />
+      <type name="Hugin.POS.States.ListVoid" />
+      <type name="Hugin.POS.States.ReportMenu" />
+      <type name="Hugin.POS.States.ServiceMenu" />
+      <type name="Hugin.POS.States.SetupMenu" />
+    </excludelist>
+    <mapping>
+      <mapoutput overwrite="false">
+        <file dir="${configdir}\Dotfuscated" name="Map.xml" />
+      </mapoutput>
+    </mapping>
+  </renaming>
+</dotfuscator>

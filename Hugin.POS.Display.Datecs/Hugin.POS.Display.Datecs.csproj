@@ -1,0 +1,130 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9C3C678B-7F35-471A-AEC8-FB39D96A91E3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hugin.POS.Display</RootNamespace>
+    <AssemblyName>Hugin.POS.Display</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CaretLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerForm.Designer.cs">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Display.cs" />
+    <Compile Include="ExternalDisplay.cs" />
+    <Compile Include="GradientFillledButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GridLineDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Keyboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Skin.cs" />
+    <None Include="Properties\SVNTemplate.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hugin.POS.Common\Hugin.POS.Common.csproj">
+      <Project>{3426D756-1308-4EAC-AA4E-243E4AAC0FC1}</Project>
+      <Name>Hugin.POS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hugin.POS.Data\Hugin.POS.Data.csproj">
+      <Project>{32D7C842-5D43-43EF-842B-EAF129D928EC}</Project>
+      <Name>Hugin.POS.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CustomerForm.resx">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Keyboard.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Keyboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\footer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ledon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\footer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green-white-male-user-icone-7708-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gray-circle-icone-6920-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\register.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow-circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nocustomer.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PreBuildEvent>"C:\Program Files\TortoiseSVN\bin\SubWCRev.exe" "$(SolutionDir)$(ProjectName)" "$(ProjectDir)Properties\SVNTemplate.cs" "$(ProjectDir)Properties\AssemblyInfo.cs"</PreBuildEvent>
+  </PropertyGroup>
+</Project>

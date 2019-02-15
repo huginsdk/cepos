@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3426D756-1308-4EAC-AA4E-243E4AAC0FC1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hugin.POS.Common</RootNamespace>
+    <AssemblyName>Hugin.POS.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Rebex.Net.Ftp">
+      <HintPath>..\Etc\Rebex\Rebex.Net.Ftp.dll</HintPath>
+    </Reference>
+    <Reference Include="Rebex.Net.ProxySocket">
+      <HintPath>..\Etc\Rebex\Rebex.Net.ProxySocket.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountingParty.cs" />
+    <Compile Include="AdditionalDocInfo.cs" />
+    <Compile Include="AdditionalMedhods\PrinterMethods.cs" />
+    <Compile Include="ConfigurationManager.cs" />
+    <Compile Include="ConfigureSystemTime.cs" />
+    <Compile Include="Debugger.cs" />
+    <Compile Include="Department.cs" />
+    <Compile Include="Exceptions.cs" />
+    <Compile Include="EZLogger.cs" />
+    <Compile Include="FileHelper.cs" />
+    <Compile Include="IAdjustable.cs" />
+    <Compile Include="IAdjustment.cs" />
+    <Compile Include="ICashier.cs" />
+    <Compile Include="IConfirm.cs" />
+    <Compile Include="ICredit.cs" />
+    <Compile Include="ICurrency.cs" />
+    <Compile Include="ICustomer.cs" />
+    <Compile Include="IDataConnector.cs" />
+    <Compile Include="IDisplay.cs" />
+    <Compile Include="IDoubleEnumerator.cs" />
+    <Compile Include="IEftPos.cs" />
+    <Compile Include="IEftResponse.cs" />
+    <Compile Include="IFiscalItem.cs" />
+    <Compile Include="IFiscalPrinter.cs" />
+    <Compile Include="IMenuList.cs" />
+    <Compile Include="IOrderPrinter.cs" />
+    <Compile Include="IPointAdapter.cs" />
+    <Compile Include="IPosClient.cs" />
+    <Compile Include="IPrinterRequest.cs" />
+    <Compile Include="IPrinterResponse.cs" />
+    <Compile Include="IProduct.cs" />
+    <Compile Include="IReport.cs" />
+    <Compile Include="ISalesDocument.cs" />
+    <Compile Include="IScale.cs" />
+    <Compile Include="ISecurityConnector.cs" />
+    <Compile Include="ISettings.cs" />
+    <Compile Include="ITestablePrinter.cs" />
+    <Compile Include="ITransferClient.cs" />
+    <Compile Include="KeyMap.cs" />
+    <Compile Include="PointObject.cs" />
+    <Compile Include="PosKey.cs" />
+    <Compile Include="PosMessage.cs" />
+    <Compile Include="Number.cs" />
+    <Compile Include="PosConfiguration.cs" />
+    <Compile Include="PrintedDocumentInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Category.cs" />
+    <Compile Include="TransferClientFile.cs" />
+    <Compile Include="TransferClientFtp.cs" />
+    <Compile Include="Utilities.cs" />
+    <Compile Include="WordConversion.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+</Project>

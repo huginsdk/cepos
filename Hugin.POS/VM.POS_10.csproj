@@ -1,0 +1,511 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{22F121D2-FF40-4952-AC9E-134C87FEC155}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hugin.POS</RootNamespace>
+    <AssemblyName>pos</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <StartupObject>Hugin.POS.Chassis</StartupObject>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\pos.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>bin\Debug\pos.xml</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>bin\Debug\pos.xml</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>bin\Debug\pos.xml</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.4.369, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Etc\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adjustment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ErrForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NumericInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="States\ConfirmVoid.cs" />
+    <Compile Include="States\EnterClerkNumber.cs" />
+    <Compile Include="States\PaymentAfterPE.cs" />
+    <Compile Include="TimeInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VMDisplayAdapter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BarcodeAdjustment.cs" />
+    <Compile Include="CashRegister.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Error.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exceptions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FiscalItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IDoubleEnumerable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IMenuItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Invoice.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Label.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DocumentFileHelper.cs" />
+    <Compile Include="MenuLabel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MenuList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Number.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Program.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PromotionDocument.cs" />
+    <None Include="Properties\SVNTemplate.cs" />
+    <Compile Include="Receipt.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReturnDocument.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SalesDocument.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SalesItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\AlertCashier.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\AssignSalesPerson.cs" />
+    <Compile Include="States\Calculator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\CashRegisterLoadError.cs" />
+    <Compile Include="States\CommandMenu.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\ConfirmCashier.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\ConfirmLogout.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\BlockingState.cs" />
+    <Compile Include="States\ConfirmPayment.cs" />
+    <Compile Include="States\ConfirmSlip.cs" />
+    <Compile Include="States\ElectronicJournalError.cs" />
+    <Compile Include="States\FiscalIdBlock.cs" />
+    <Compile Include="States\KeyServiceMenu.cs" />
+    <Compile Include="States\KeyState.cs" />
+    <Compile Include="States\EnterCurrency.cs" />
+    <Compile Include="States\EnterDecimal.cs" />
+    <Compile Include="States\PrinterBlockingError.cs" />
+    <Compile Include="States\PrinterConnectionError.cs" />
+    <Compile Include="States\ServiceMenu.cs" />
+    <Compile Include="States\SetupMenu.cs" />
+    <Compile Include="States\WaitingState.cs" />
+    <Compile Include="States\PrinterStatusError.cs" />
+    <Compile Include="States\CustomerInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\DocumentOpen.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\DocumentPaying.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\DocumentState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\DocumentSubTotal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\EnterCardNumber.cs" />
+    <Compile Include="States\EnterInteger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\EnterIP.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\EnterNumber.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\EnterPassword.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\EnterString.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\EnterTotalAmount.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\EnterUnitPrice.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\List.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\ListCommandMenu.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\ListCreditTypes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\ListCurrencies.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\ListDocument.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\ListLabel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\ListProductBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\ListProductRepeat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\ListProductVoid.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\ListVoid.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\Login.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\LoginLocked.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\Payment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\PaymentAfterTotalAdjustment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\ReportMenu.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\Selling.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\SilentState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\Start.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\State.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\VoidPayment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\VoidSale.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="States\XReportPE.cs" />
+    <Compile Include="TcpService.cs" />
+    <Compile Include="VMBackgroundWorker.cs" />
+    <Compile Include="VMDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VoidItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Waybill.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\CARI.DAT">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\KASIYER.DAT">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\PROGRAM.DAT">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\PROMO.DAT">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\PROREYON.DAT">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\PROURUN.DAT">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\URUN.DAT">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\App.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Keyboard.ini">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Compile Include="CashPaymentInfo.cs" />
+    <Compile Include="CheckPaymentInfo.cs" />
+    <Compile Include="Confirm.cs" />
+    <Compile Include="CreditPaymentInfo.cs" />
+    <Compile Include="CurrencyPaymentInfo.cs" />
+    <Compile Include="CustomerMenuList.cs" />
+    <Compile Include="ModuleManeger.cs" />
+    <Compile Include="PaymentInfo.cs" />
+    <Compile Include="States\ConfirmAuthorization.cs" />
+    <Compile Include="States\DocumentPaymentStatus.cs" />
+    <Compile Include="States\EJSummaryReportPE.cs" />
+    <Compile Include="States\EnterQRCode.cs" />
+    <Compile Include="States\ListFiscalItem.cs" />
+    <Compile Include="States\ListProductPriceLookup.cs" />
+    <Compile Include="States\PaymentList.cs" />
+    <Compile Include="ProductMenuList.cs" />
+    <Compile Include="Recover.cs" />
+    <Compile Include="Scale.cs" />
+    <Compile Include="States\BarcodeMenu.cs" />
+    <Compile Include="States\EnterBarcode.cs" />
+    <Compile Include="States\PrintEftPaymentAfterPE.cs" />
+    <Compile Include="States\SellingAfterSubtotalCorrection.cs" />
+    <Compile Include="States\Teller.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ErrForm.resx">
+      <DependentUpon>ErrForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyButton.resx">
+      <DependentUpon>MyButton.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NumericInput.resx">
+      <DependentUpon>NumericInput.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimeInput.resx">
+      <DependentUpon>TimeInput.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VMDisplay.resx">
+      <DependentUpon>VMDisplay.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\Program.def">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="Properties\Template.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hugin.POS.Common\Hugin.POS.Common.csproj">
+      <Project>{3426D756-1308-4EAC-AA4E-243E4AAC0FC1}</Project>
+      <Name>Hugin.POS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hugin.POS.Data\Hugin.POS.Data.csproj">
+      <Project>{32D7C842-5D43-43EF-842B-EAF129D928EC}</Project>
+      <Name>Hugin.POS.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hugin.POS.Printer.FP300\Hugin.POS.Printer.FP300.csproj">
+      <Project>{0A0D1F87-72C8-4EE3-8777-D023A1E8800D}</Project>
+      <Name>Hugin.POS.Printer.FP300</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hugin.POS.PromotionServer\Hugin.POS.PromotionServer.csproj">
+      <Project>{6B0FACC2-B4C2-4FEF-9D32-10DC03A0A96B}</Project>
+      <Name>Hugin.POS.PromotionServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hugin.POS.Security.Intel\Hugin.POS.Security.File.csproj">
+      <Project>{81A03884-DB80-45E9-8F5D-54CBE2CE6847}</Project>
+      <Name>Hugin.POS.Security.File</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Image\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+</Project>

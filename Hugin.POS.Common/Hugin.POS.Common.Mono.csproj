@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DC47C512-B582-4E83-B73A-FD375FB3C739}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Hugin.POS.Common</RootNamespace>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AssemblyName>Hugin.POS.Common</AssemblyName>
+    <TargetFrameworkVersion>v3.1</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>..\Hugin.POS\bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;Mono</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <AndroidLinkMode>None</AndroidLinkMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>..\Hugin.POS\bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <ConsolePause>False</ConsolePause>
+    <DefineConstants>Mono</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Rebex.Net.Ftp">
+      <HintPath>..\Etc\Rebex\Rebex.Net.Ftp.dll</HintPath>
+    </Reference>
+    <Reference Include="Rebex.Net.ProxySocket">
+      <HintPath>..\Etc\Rebex\Rebex.Net.ProxySocket.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="ConfigurationManager.cs" />
+    <Compile Include="ConfigureSystemTime.cs" />
+    <Compile Include="Debugger.cs" />
+    <Compile Include="Department.cs" />
+    <Compile Include="Exceptions.cs" />
+    <Compile Include="EZLogger.cs" />
+    <Compile Include="FileHelper.cs" />
+    <Compile Include="IAdjustable.cs" />
+    <Compile Include="IAdjustment.cs" />
+    <Compile Include="ICashier.cs" />
+    <Compile Include="IConfirm.cs" />
+    <Compile Include="IConnectable.cs" />
+    <Compile Include="ICredit.cs" />
+    <Compile Include="ICurrency.cs" />
+    <Compile Include="ICustomer.cs" />
+    <Compile Include="IDataConnector.cs" />
+    <Compile Include="IDisplay.cs" />
+    <Compile Include="IDoubleEnumerator.cs" />
+    <Compile Include="IFiscalItem.cs" />
+    <Compile Include="IMenuList.cs" />
+    <Compile Include="IOrderPrinter.cs" />
+    <Compile Include="IPointAdapter.cs" />
+    <Compile Include="IPosClient.cs" />
+    <Compile Include="IPrinterRequest.cs" />
+    <Compile Include="IPrinterResponse.cs" />
+    <Compile Include="IProduct.cs" />
+    <Compile Include="IReport.cs" />
+    <Compile Include="ISalesDocument.cs" />
+    <Compile Include="ISecurityConnector.cs" />
+    <Compile Include="ISettings.cs" />
+    <Compile Include="ITransferClient.cs" />
+    <Compile Include="KeyMap.cs" />
+    <Compile Include="Number.cs" />
+    <Compile Include="PointObject.cs" />
+    <Compile Include="PosConfiguration.cs" />
+    <Compile Include="PosKey.cs" />
+    <Compile Include="PosMessage.cs" />
+    <Compile Include="TransferClientFile_Mono.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TransferClientFtp.cs" />
+    <Compile Include="Utilities.cs" />
+    <Compile Include="WordConversion.cs" />
+    <Compile Include="IMainForm_Mono.cs" />
+    <Compile Include="SubCategory.cs" />
+    <Compile Include="IFiscalPrinter.cs" />
+    <Compile Include="IScale.cs" />
+    <Compile Include="IEftPos.cs" />
+    <Compile Include="IEftResponse.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="AdditionalMedhods\PrinterMethods.cs">
+      <Link>AdditionalMethods\PrinterMethods.cs</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="ITestablePrinter.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="PrintedDocumentInfo.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Resources\AboutResources.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Strings.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="AdditionalMethods\" />
+  </ItemGroup>
+</Project>

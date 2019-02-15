@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F71E12B9-F798-40CB-8675-78AF1EEB1ECA}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Hugin.POS</RootNamespace>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AssemblyName>HuginPOS</AssemblyName>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <TargetFrameworkVersion>v3.1</TargetFrameworkVersion>
+    <AndroidSupportedAbis>armeabi%3barmeabi-v7a%3bx86</AndroidSupportedAbis>
+    <MandroidI18n />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;Mono</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <Commandlineparameters>MONO</Commandlineparameters>
+    <AndroidStoreUncompressedFileExtensions />
+    <JavaMaximumHeapSize />
+    <JavaOptions />
+    <AndroidLinkMode>None</AndroidLinkMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <DefineConstants>Mono</DefineConstants>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidSupportedAbis>armeabi,armeabi-v7a</AndroidSupportedAbis>
+    <MandroidI18n>mideast,other,rare,west</MandroidI18n>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo_Mono.cs" />
+    <Compile Include="Adjustment.cs" />
+    <Compile Include="BackgroundWorker.cs" />
+    <Compile Include="BarcodeAdjustment.cs" />
+    <Compile Include="CashPaymentInfo.cs" />
+    <Compile Include="CashRegister.cs" />
+    <Compile Include="CheckPaymentInfo.cs" />
+    <Compile Include="Confirm.cs" />
+    <Compile Include="CreditPaymentInfo.cs" />
+    <Compile Include="CurrencyPaymentInfo.cs" />
+    <Compile Include="CustomerMenuList.cs" />
+    <Compile Include="DisplayAdapter.cs" />
+    <Compile Include="DocumentFileHelper.cs" />
+    <Compile Include="Error.cs" />
+    <Compile Include="Exceptions.cs" />
+    <Compile Include="FiscalItem.cs" />
+    <Compile Include="IDoubleEnumerable.cs" />
+    <Compile Include="IMenuItem.cs" />
+    <Compile Include="Invoice.cs" />
+    <Compile Include="IState.cs" />
+    <Compile Include="Label.cs" />
+    <Compile Include="MenuLabel.cs" />
+    <Compile Include="MenuList.cs" />
+    <Compile Include="Number.cs" />
+    <Compile Include="PaymentInfo.cs" />
+    <Compile Include="ProductMenuList.cs" />
+    <Compile Include="PromotionDocument.cs" />
+    <Compile Include="Receipt.cs" />
+    <Compile Include="Recover.cs" />
+    <Compile Include="ReturnDocument.cs" />
+    <Compile Include="SalesDocument.cs" />
+    <Compile Include="SalesItem.cs" />
+    <Compile Include="VoidItem.cs" />
+    <Compile Include="Waybill.cs" />
+    <Compile Include="States\AlertCashier.cs" />
+    <Compile Include="States\AssignSalesPerson.cs" />
+    <Compile Include="States\BarcodeMenu.cs" />
+    <Compile Include="States\BlockingState.cs" />
+    <Compile Include="States\BlockOnPaper.cs" />
+    <Compile Include="States\Calculator.cs" />
+    <Compile Include="States\CashRegisterLoadError.cs" />
+    <Compile Include="States\CommandMenu.cs" />
+    <Compile Include="States\ConfirmAuthorization.cs" />
+    <Compile Include="States\ConfirmCashier.cs" />
+    <Compile Include="States\ConfirmLogout.cs" />
+    <Compile Include="States\ConfirmPayment.cs" />
+    <Compile Include="States\ConfirmSlip.cs" />
+    <Compile Include="States\CustomerInfo.cs" />
+    <Compile Include="States\DocumentOpen.cs" />
+    <Compile Include="States\DocumentPaying.cs" />
+    <Compile Include="States\DocumentPaymentStatus.cs" />
+    <Compile Include="States\DocumentPE.cs" />
+    <Compile Include="States\DocumentState.cs" />
+    <Compile Include="States\DocumentSubTotal.cs" />
+    <Compile Include="States\EJSummaryReportPE.cs" />
+    <Compile Include="States\ElectronicJournalError.cs" />
+    <Compile Include="States\EnterBarcode.cs" />
+    <Compile Include="States\EnterCardNumber.cs" />
+    <Compile Include="States\EnterCurrency.cs" />
+    <Compile Include="States\EnterDecimal.cs" />
+    <Compile Include="States\EnterInteger.cs" />
+    <Compile Include="States\EnterIP.cs" />
+    <Compile Include="States\EnterNumber.cs" />
+    <Compile Include="States\EnterPassword.cs" />
+    <Compile Include="States\EnterString.cs" />
+    <Compile Include="States\EnterTotalAmount.cs" />
+    <Compile Include="States\EnterUnitPrice.cs" />
+    <Compile Include="States\FiscalIdBlock.cs" />
+    <Compile Include="States\KeyInputBlockingError.cs" />
+    <Compile Include="States\KeyServiceMenu.cs" />
+    <Compile Include="States\KeyState.cs" />
+    <Compile Include="States\List.cs" />
+    <Compile Include="States\ListCommandMenu.cs" />
+    <Compile Include="States\ListCreditTypes.cs" />
+    <Compile Include="States\ListCurrencies.cs" />
+    <Compile Include="States\ListDocument.cs" />
+    <Compile Include="States\ListFiscalItem.cs" />
+    <Compile Include="States\ListLabel.cs" />
+    <Compile Include="States\ListProductBase.cs" />
+    <Compile Include="States\ListProductPriceLookup.cs" />
+    <Compile Include="States\ListProductRepeat.cs" />
+    <Compile Include="States\ListProductVoid.cs" />
+    <Compile Include="States\ListVoid.cs" />
+    <Compile Include="States\Login.cs" />
+    <Compile Include="States\LoginLocked.cs" />
+    <Compile Include="States\Payment.cs" />
+    <Compile Include="States\PaymentAfterPE.cs" />
+    <Compile Include="States\PaymentAfterTotalAdjustment.cs" />
+    <Compile Include="States\PaymentList.cs" />
+    <Compile Include="States\PaymentOnBarcode.cs" />
+    <Compile Include="States\PrinterBlockingError.cs" />
+    <Compile Include="States\PrinterConnectionError.cs" />
+    <Compile Include="States\PrinterStatusError.cs" />
+    <Compile Include="States\ReportMenu.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="States\Selling.cs" />
+    <Compile Include="States\SellingAfterSubtotalCorrection.cs" />
+    <Compile Include="States\ServiceMenu.cs" />
+    <Compile Include="States\SetupMenu.cs" />
+    <Compile Include="States\SilentState.cs" />
+    <Compile Include="States\Start.cs" />
+    <Compile Include="States\State.cs" />
+    <Compile Include="States\Teller.cs" />
+    <Compile Include="States\VoidPayment.cs" />
+    <Compile Include="States\VoidSale.cs" />
+    <Compile Include="States\WaitingState.cs" />
+    <Compile Include="States\XReportPE.cs" />
+    <Compile Include="CashRegisterInput_Mono.cs" />
+    <Compile Include="Scale_Mono.cs" />
+    <Compile Include="Program_Mono.cs" />
+    <Compile Include="TcpOrder.cs" />
+    <Compile Include="ModuleManeger.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="States\EnterClerkNumber.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="States\EnterQRCode.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="States\ConfirmVoid.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="States\PrintEftPaymentAfterPE.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Hugin.POS.Common\Hugin.POS.Common.Mono.csproj">
+      <Project>{DC47C512-B582-4E83-B73A-FD375FB3C739}</Project>
+      <Name>Hugin.POS.Common.Mono</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hugin.POS.Data\Hugin.POS.Data.Mono.csproj">
+      <Project>{F4440AF5-CAC0-4166-8382-1AD8B7574D62}</Project>
+      <Name>Hugin.POS.Data.Mono</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hugin.POS.Display.Mono\Hugin.POS.Display.csproj">
+      <Project>{7BDD0513-72BC-4477-91DF-6BA50E54CA44}</Project>
+      <Name>Hugin.POS.Display</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hugin.POS.Printer.Vx675\Hugin.POS.Printer.MonoBase.csproj">
+      <Project>{9B0305F0-B205-4AC6-8D85-B3A628DA01EE}</Project>
+      <Name>Hugin.POS.Printer.MonoBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hugin.POS.Security.Intel\Hugin.POS.Security.Mono.csproj">
+      <Project>{8915A353-86B5-450B-B82E-644FA05E8EF2}</Project>
+      <Name>Hugin.POS.Security.Mono</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\banner.bmp" />
+  </ItemGroup>
+  <Import Project="..\packages\Xamarin.Forms.1.2.2.6243\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.2.2.6243\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" />
+</Project>
